@@ -7,7 +7,7 @@ public class AccountingSystem
 
     }
 
-    public void updateAccountingInfo ()
+    public static void updateAccountingInfo ()
     {
         
     }

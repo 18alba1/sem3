@@ -1,16 +1,25 @@
 package model;
 
+import java.util.ArrayList;
+import integration.*;
+
 public class Goods 
 {
-    public Goods (int products)
-    {
+    private Receipt receipt;
+    private ArrayList<ItemDTO> items = new ArrayList<ItemDTO>();
 
+    public Goods ()
+    {
+        receipt = new Receipt();
     }
 
-    public void addProduct (int itemDescription)        // fixa DTO itemDescripton sen
+    public String addProduct (int barcode)
     {
-        //Display.addProduct()
+        ItemDTO item = ExternalInventory.getDescription(barcode);
 
-        //Receipt.addProduct()
+        items.add(item);
+
+        return item.getDescription();
     }
+
 }

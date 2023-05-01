@@ -1,26 +1,24 @@
 package model;
 
-import integration.AccountingSystem;
-import integration.DiscountRegister;
+import integration.*;
 
 public class Sale 
 {
+    private Register register;
 
-    public Sale ()
+    public Sale (Register register)
     {
-        Receipt receipt = new Receipt(0);
+        this.register = register;
 
-        //SaleLog.addSale()
+        SaleLog.addSale(null);
     }
 
     public void updateTotal ()
     {
-        //DiscountRegister.getMembershipDiscount()
+        register.updateTotal(0);
 
-        //Register.updateTotal()
+        AccountingSystem.updateAccountingInfo();
 
-        //AccountingSystem.updateAcountingInfo()
-
-        //SaleLog.addSale()
+        SaleLog.addSale(null);
     }
 }

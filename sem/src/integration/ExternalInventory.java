@@ -7,17 +7,17 @@ public class ExternalInventory
 
     }
 
-    public String getDescription (int barcode)      // fixa retunr DTO
+    public static ItemDTO getDescription (int barcode)      // fixa retunr DTO
     {
 
-        //Goods.addProduct()
-        
-        updateInventory(null);
+        ItemDTO item = new ItemDTO(barcode, null, barcode, null, barcode, barcode);
 
-        return "";
+        updateInventory(item);
+
+        return item;
     }
 
-    public void updateInventory (String itemDescription)    // fixa parameter DTO
+    public static void updateInventory (ItemDTO itemDescription)    // fixa parameter DTO
     {
 
     }

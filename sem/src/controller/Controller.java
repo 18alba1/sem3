@@ -4,40 +4,29 @@ import model.*;
 
 public class Controller 
 {
-
-    private Sale sale;
+    private Goods goods;
+    private Register register;
 
     public Controller ()
     {
-        
+        this.register = new Register();
     }
     
     public void startSale ()
     {
-        sale = new Sale();
-        Goods goods = new Goods(0);
+        goods = new Goods();
     }
 
     public String scanProduct (int barcode)
     {
+        String description = goods.addProduct(barcode);
 
-        //ExternalInventory.getDescription()
-
-        return "";                          // fixa sen
+        return description;
     }
     
     public void pay (double paidAmount)
     {
-        //DiscountRegister.validateID()
-
-        Change change = new Change(0);
-
-        sale.updateTotal();
-    }
-
-    public void validateID (IDDTO customerIdentification)    
-    {
-
+        //Change change = new Change(0);
     }
 
     public void endTransaction ()

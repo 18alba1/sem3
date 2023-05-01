@@ -9,14 +9,14 @@ public class Receipt
     private double totalVat;
 
     private double change;
-    private ArrayList<ItemDTO> items = new ArrayList<ItemDTO>();
+    //private ArrayList<ItemDTO> items = new ArrayList<ItemDTO>();
 
-    public Receipt (int saleInformation)
+    public Receipt ()
     {
 
     }
 
-    public void addProduct (String itemDescription)         // fixa parameter DTO sen
+    public void addProduct (ItemDTO item)
     {
 
     }

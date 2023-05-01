@@ -7,7 +7,7 @@ public class SaleLog
 
     }
 
-    public void addSale (String sale)       // fixa parameter DTO
+    public static void addSale (String sale)       // fixa parameter DTO
     {
 
     }
