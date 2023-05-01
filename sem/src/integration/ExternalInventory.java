@@ -9,6 +9,11 @@ public class ExternalInventory
 
     public String getDescription (int barcode)      // fixa retunr DTO
     {
+
+        //Goods.addProduct()
+        
+        updateInventory(null);
+
         return "";
     }
 

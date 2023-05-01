@@ -9,6 +9,8 @@ public class Goods
 
     public void addProduct (int itemDescription)        // fixa DTO itemDescripton sen
     {
+        //Display.addProduct()
 
+        //Receipt.addProduct()
     }
 }
