@@ -17,7 +17,10 @@ public class ExternalInventory
     }
 
     /*
+     * Returns an ItemDTO object with the specified barcode 
      * 
+     * @param barcode, the unique barcode identifier of the item
+     * @return an ItemDTO object with the specified barcode and other values for all other parameters
      */
     public static ItemDTO getItem (int barcode)      
     {
@@ -26,6 +29,11 @@ public class ExternalInventory
         return item;
     }
 
+    /*
+     * Updates inventory
+     * 
+     * @param items, an Array list of all items
+     */
     public static void updateInventory (ArrayList<ItemDTO> items)    
     {
         // Behöver ej koda
