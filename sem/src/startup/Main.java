@@ -3,7 +3,6 @@ package startup;
 import controller.Controller;
 import integration.DbCreator;
 import view.View;
-import  model.*;
 
 public class Main 
 {

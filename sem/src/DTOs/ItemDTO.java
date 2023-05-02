@@ -1,4 +1,4 @@
-package integration;
+package DTOs;
 
 public class ItemDTO 
 {
