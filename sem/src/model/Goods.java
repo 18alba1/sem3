@@ -1,7 +1,6 @@
 package model;
 
 import java.util.ArrayList;
-
 import DTOs.ItemDTO;
 import integration.*;
 
@@ -14,32 +13,41 @@ public class Goods
         
     }
 
-    private void isDuplicateItem(Goods item, int quantity) {
+    public ArrayList<ItemDTO> getItems ()
+    {
+        return items; 
+    }
+
+    private boolean duplicateItem(ItemDTO item) 
+    {
         boolean found = false;
-        for (int i = 0; i < items.size(); i++) {
-            Goods currentItem = items.get(i);
-            if (currentItem.getDescription() == item.getDescription) {
+
+        for (int i = 0; i < items.size(); i++)
+        {
+            ItemDTO currentItem = items.get(i);
+            
+            if (currentItem.getDescription() == item.getDescription())
+            {
                 found = true;
-                int newQuantity = ItemDTO.getQuantity(i) + quantity;
-                ItemDTO.setQuantity(i, newQuantity);
+                int newQuantity = currentItem.getQuantity() + 1;
+                currentItem.setQuantity(newQuantity);
                 break;
             }
         }
+
+        return found;
+
     }
 
-    public double pay(double paidAmount) {
-        double change = paidAmount - Register.getTotalPrice();
-    
-        return change;
-    }
-
-    public String addProduct (int barcode)
+    public ItemDTO addProduct (int barcode)
     {
-        ItemDTO item = ExternalInventory.getDescription(barcode);
+        ItemDTO item = ExternalInventory.getItem(barcode);
 
-        items.add(item);
+        boolean found = duplicateItem (item);
+        if (found == false)
+         items.add(item);
 
-        return item.getDescription();
+        return item;
     }
 
 }

@@ -1,24 +1,33 @@
 package integration;
 
+import java.util.ArrayList;
+import DTOs.*;
+
+/*
+ * The external inventory of the program
+ */
 public class ExternalInventory 
 {
+    /*
+     * The external inventory
+     */
     public ExternalInventory ()
     {
 
     }
 
-    public static ItemDTO getDescription (int barcode)      // fixa retunr DTO
+    /*
+     * 
+     */
+    public static ItemDTO getItem (int barcode)      
     {
-
         ItemDTO item = new ItemDTO(barcode, null, barcode, null, barcode, barcode);
-
-        updateInventory(item);
 
         return item;
     }
 
-    public static void updateInventory (ItemDTO itemDescription)    // fixa parameter DTO
+    public static void updateInventory (ArrayList<ItemDTO> items)    
     {
-
+        // Behöver ej koda
     }
 }

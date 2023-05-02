@@ -1,4 +1,5 @@
 package integration;
+import DTOs.*;
 
 public class SaleLog 
 {
@@ -7,8 +8,8 @@ public class SaleLog
 
     }
 
-    public static void addSale (String sale)       // fixa parameter DTO
+    public static void addSale (ReceiptDTO receipt)       
     {
-
+        //Behöver ej koda
     }
 }

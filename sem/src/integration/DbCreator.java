@@ -1,7 +1,13 @@
 package integration;
 
+/*
+ * A class that creates other classes
+ */
 public class DbCreator 
 {
+    /*
+     * Creates external inventory etc
+     */
     public DbCreator ()
     {
         AccountingSystem accounting = new AccountingSystem();

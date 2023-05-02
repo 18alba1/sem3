@@ -1,36 +1,70 @@
 package controller;
+import DTOs.ItemDTO;
+import DTOs.ReceiptDTO;
 import integration.*;
 import model.*;
+import java.util.ArrayList;
 
+/*
+ * The controller class which contains all logic
+ */
 public class Controller 
 {
     private Goods goods;
     private Register register;
 
+    /* 
+     * Creates the Register
+    */
     public Controller ()
     {
         this.register = new Register();
     }
     
+    /*
+     * Starts the sale
+     */
     public void startSale ()
     {
         goods = new Goods();
     }
 
-    public String scanProduct (int barcode)
+    /*
+     * Scans the products barcod and adds prdouct to item list.
+     * It also updates total in Register.
+     * 
+     * @param barcode The barcode of the product that is currently being scanned
+     * @return ItemDTO which represents the scanned product
+     */
+    public ItemDTO scanProduct (int barcode)
     {
-        String description = goods.addProduct(barcode);
-
-        return description;
+        ItemDTO item = goods.addProduct(barcode);
+        register.updateTotal(item);
+        
+        return item;
     }
     
-    public void pay (double paidAmount)
+    /*
+     * Handles payment and calculates change
+     * 
+     * @param paidAmount The amount that the customer pays
+     * @return The result of the change calculation
+     */
+    public double pay (double paidAmount)
     {
-        //Change change = new Change(0);
+        double change = register.payment(paidAmount);
+        
+        return change; 
     }
 
-    public void endTransaction ()
+    /*
+     * Ends transacrion and gets all items which is needed to create the receipt
+     * 
+     * @return object representing the receipt for the items purchased
+     */
+    public ReceiptDTO endTransaction ()
     {
-        
+        ArrayList<ItemDTO> itemList = goods.getItems();
+        return register.createReceipt(itemList);
     }
 }
