@@ -29,6 +29,13 @@ public class ItemDTO
         this.vat = vat;
     }
 
+
+    @Override
+    public String toString()
+    {
+        return itemNumber + ": " + name + " | " + price + " kr\n";
+    }
+
     /*
      * Gets price
      * 

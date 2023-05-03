@@ -21,7 +21,5 @@ public class Main
 
         View view = new View(controller);
         DbCreator creator = new DbCreator();
-
-        System.out.println("finished program.");
     }
 }

@@ -1,7 +1,6 @@
 package controller;
 import DTOs.ItemDTO;
 import DTOs.ReceiptDTO;
-import integration.*;
 import model.*;
 import java.util.ArrayList;
 

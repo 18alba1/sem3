@@ -28,6 +28,7 @@ public class Register
     public void updateTotal (ItemDTO item)
     {
         totalPrice += item.getPrice();
+        totalVAT += item.getPrice() * (item.getVAT() / 100);
         
         //Display.updateTotal()
     }

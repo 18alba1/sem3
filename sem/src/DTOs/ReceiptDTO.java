@@ -26,6 +26,23 @@ public class ReceiptDTO {
         this.items = items;
     }
 
+
+    @Override
+    public String toString()
+    {
+
+        String receipt = "----- RECEIPT -----" + "\n";
+
+        for(int i = 0; i < items.size(); i++)
+        {
+            receipt += items.get(i).toString();
+        }
+
+        receipt += "Total Price: " + totalPrice + " kr \n" + "Total Vat: " + totalVAT + " kr \n" + "Change back: " + change + " kr";
+
+        return receipt;
+    }
+
      /*
      * Gets total price
      * 

@@ -16,13 +16,22 @@ public class View
     public View(Controller contr)
     {
         
-       contr.startSale();
+        contr.startSale();
 
-       ItemDTO item = contr.scanProduct(0);
+        ItemDTO item1 = contr.scanProduct(1);
+        System.out.println("Scanned Item: " + item1.getName());
 
-       contr.pay(0);
+        ItemDTO item2 = contr.scanProduct(2);
+        System.out.println("Scanned Item: " + item2.getName());
 
-       ReceiptDTO receipt = contr.endTransaction();
+        ItemDTO item3 = contr.scanProduct(3);
+        System.out.println("Scanned Item: " + item3.getName());
+
+        double change = contr.pay(500);
+        System.out.println("change back: " + change + "\n");
+
+        ReceiptDTO receipt = contr.endTransaction();
+        System.out.println(receipt.toString());
  
     }
 }
