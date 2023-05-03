@@ -51,9 +51,8 @@ public class Register
      */
     public ReceiptDTO createReceipt (ArrayList<ItemDTO> items)
     {
-        ReceiptDTO receipt = new ReceiptDTO(0,0,0,null);
+        ReceiptDTO receipt = new ReceiptDTO(totalPrice, totalVAT, change, items);
         return receipt;
-
     }
     
     /*

@@ -40,10 +40,15 @@ public class controllerTest {
     @Test
     public void testScanProduct_AddProduct()
     {
+        contr = new Controller();
+        contr.startSale();
+        DbCreator creator = new DbCreator();
+
         contr.scanProduct(1);
         contr.pay(30);
+
         ReceiptDTO receipt = contr.endTransaction();
-        ArrayList<ItemDTO> item = receipt.getItems();
-        assertEquals(1, item.size(), "false");
+
+        assertEquals(1, receipt.getItems().size(), "false");
     }
 }

@@ -65,9 +65,11 @@ public class Goods
     {
         ItemDTO item = ExternalInventory.getItem(barcode);
 
-        boolean found = duplicateItem (item);
+        /*boolean found = duplicateItem (item);
         if (found == false)
-         items.add(item);
+         items.add(item);*/
+
+        items.add(item);
 
         return item;
     }
