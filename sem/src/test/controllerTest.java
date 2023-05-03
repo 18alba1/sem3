@@ -17,12 +17,11 @@ import controller.Controller;
 import integration.DbCreator;
 import model.Register;
 
-public class controllerTest {
+public class ControllerTest
+{
     private Controller contr;
     
-
-    
-    public controllerTest() 
+    public ControllerTest() 
     {
         contr = new Controller();
         contr.startSale();
@@ -76,4 +75,5 @@ public class controllerTest {
 
         assertEquals(change, receipt.getChange(), "false");
     }
+
 }
