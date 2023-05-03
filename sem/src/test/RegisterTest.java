@@ -5,15 +5,15 @@ import org.junit.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 import DTOs.ItemDTO;
-import integration.DbCreator;
 import model.Register;
 
-public class RegisterTest {
+public class RegisterTest
+{
     private Register register;
 
-    public RegisterTest() {
+    public RegisterTest()
+    {
         register = new Register();
-        DbCreator creator = new DbCreator();
     }
 
     @After
@@ -45,5 +45,4 @@ public class RegisterTest {
 
         assertEquals(change, register.payment(200), "false");
     }
-
 }

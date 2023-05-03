@@ -5,16 +5,16 @@ import org.junit.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 import DTOs.ItemDTO;
-import integration.DbCreator;
 import model.Goods;
 
 
-public class GoodsTest {
+public class GoodsTest 
+{
     private Goods goods;
     
-    public GoodsTest() {
+    public GoodsTest() 
+    {
         goods = new Goods();
-        DbCreator creator = new DbCreator();
     }
 
     @After

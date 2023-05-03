@@ -6,7 +6,6 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import DTOs.ReceiptDTO;
 import controller.Controller;
-import integration.DbCreator;
 
 public class ControllerTest
 {
@@ -16,7 +15,6 @@ public class ControllerTest
     {
         contr = new Controller();
         contr.startSale();
-        DbCreator creator = new DbCreator();
     }
 
     @After

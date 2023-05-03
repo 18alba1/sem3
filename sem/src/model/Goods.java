@@ -35,7 +35,7 @@ public class Goods
      * @param item The ItemDTO to check for duplicates.
      * @return true if the ItemDTO already exists in the list, false otherwise.
      */
-    private boolean duplicateItem(ItemDTO item) 
+    private boolean checkIfDuplicatedItem(ItemDTO item) 
     {
         boolean found = false;
 
@@ -66,7 +66,7 @@ public class Goods
         ItemDTO item = ExternalInventory.getItem(barcode);
         if (item.getItemNumber() != 0)
         {
-        boolean found = duplicateItem (item);
+        boolean found = checkIfDuplicatedItem(item);
         if (found == false)
             items.add(item);
         }

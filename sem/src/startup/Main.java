@@ -1,7 +1,7 @@
 package startup;
 
 import controller.Controller;
-import integration.DbCreator;
+import integration.*;
 import view.View;
 
 /*
@@ -19,7 +19,10 @@ public class Main
     {
         Controller controller = new Controller();
 
-        View view = new View(controller);
-        DbCreator creator = new DbCreator();
+        new View(controller);
+
+        new AccountingSystem();
+        new ExternalInventory();
+        new SaleLog();
     }
 }
