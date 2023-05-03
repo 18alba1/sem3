@@ -24,8 +24,23 @@ public class ExternalInventory
      */
     public static ItemDTO getItem (int barcode)      
     {
-        ItemDTO item = new ItemDTO(barcode, null, barcode, null, barcode, barcode);
-
+        ItemDTO item;
+        if(barcode == 1)
+        {
+            item = new ItemDTO(barcode, "Tomat",10 , "Röd", 1, 25); 
+        } 
+        else if (barcode == 2)
+        {
+            item = new ItemDTO(barcode, "Potatis",5 , "God", 1, 25);
+        }
+        else if (barcode == 3) 
+        {
+            item = new ItemDTO(barcode, "Gurka",15 , "Grön", 1, 25); 
+        } 
+        else 
+        {
+            item = new ItemDTO(barcode, "NOTFound",0 , "", 0, 0);
+        }
         return item;
     }
 
