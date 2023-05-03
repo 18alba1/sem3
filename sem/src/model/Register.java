@@ -27,7 +27,7 @@ public class Register
      */
     public void updateTotal (ItemDTO item)
     {
-        totalPrice = item.getPrice();
+        totalPrice += item.getPrice();
         
         //Display.updateTotal()
     }

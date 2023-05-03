@@ -24,6 +24,7 @@ public class ExternalInventory
      */
     public static ItemDTO getItem (int barcode)      
     {
+        //Exampel code for test
         ItemDTO item;
         if(barcode == 1)
         {
@@ -39,7 +40,7 @@ public class ExternalInventory
         } 
         else 
         {
-            item = new ItemDTO(barcode, "NOTFound",0 , "", 0, 0);
+            item = new ItemDTO(0, "NOTFound",0 , "", 0, 0);
         }
         return item;
     }

@@ -51,7 +51,7 @@ public class ReceiptDTO {
      * 
      * @return The change 
      */
-    public double change ()
+    public double getChange ()
     {
         return change;
     }
