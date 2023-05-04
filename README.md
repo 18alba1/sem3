@@ -1,6 +1,6 @@
 # Seminar 3
 
-The code and diagrams were made in collaboration with Alexander Ohlsson, Alexander Barhado and Dante Nilsson.
+The code and diagrams were made in collaboration with Alexander Ohlsson (Aleohl377), Alexander Barhado (18alba1) and Dante Nilsson (McPantsSenior).
 
 ## Package Diagram
 
