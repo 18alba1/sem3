@@ -4,20 +4,24 @@ The code and diagrams were made in collaboration with Alexander Ohlsson (Aleohl3
 
 ## Package Diagram
 
-![alt text](https://github.com/18alba1/sem3/blob/main/images/package.png?raw=true)
+![package](https://github.com/18alba1/sem3/blob/main/images/package.png?raw=true)
 
 ## Communication Diagram - Startup
 
-![alt text](https://github.com/18alba1/sem3/blob/main/images/StartUp.png?raw=true)
+![startup](https://github.com/18alba1/sem3/blob/main/images/StartUp.png?raw=true)
 
 ## Communication Diagram - Start Sale
 
-![alt text](https://github.com/18alba1/sem3/blob/main/images/StartSale.png?raw=true)
+![startsale](https://github.com/18alba1/sem3/blob/main/images/StartSale.png?raw=true)
 
 ## Communication Diagram - Scan Product
 
-![alt text](https://github.com/18alba1/sem3/blob/main/images/ScanProduct.png?raw=true)
+![scanproduct](https://github.com/18alba1/sem3/blob/main/images/ScanProduct.png?raw=true)
 
 ## Communication Diagram - Pay
 
-![alt text](https://github.com/18alba1/sem3/blob/main/images/Pay.png?raw=true)
+![pay](https://github.com/18alba1/sem3/blob/main/images/Pay.png?raw=true)
+
+## Output from program
+
+![output](https://github.com/18alba1/sem3/blob/main/images/output.png?raw=true)
