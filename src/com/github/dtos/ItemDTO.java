@@ -29,6 +29,11 @@ public class ItemDTO
         this.vat = vat;
     }
 
+    /*
+     * Makes a String representing the object
+     * 
+     * @return String containing information about the object
+     */
     @Override
     public String toString()
     {

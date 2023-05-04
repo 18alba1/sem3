@@ -51,7 +51,6 @@ public class Goods
         }
 
         return found;
-
     }
 
     /*

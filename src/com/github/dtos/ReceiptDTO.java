@@ -25,6 +25,11 @@ public class ReceiptDTO
         this.items = items;
     }
 
+    /*
+     * Makes a String representing the object
+     * 
+     * @return String containing information about the object
+     */
     @Override
     public String toString()
     {
