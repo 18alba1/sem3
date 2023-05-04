@@ -66,8 +66,10 @@ public class Controller
     public ReceiptDTO endTransaction()
     {
         ArrayList<ItemDTO> itemList = goods.getItems();
+        ReceiptDTO receipt = register.createReceipt(itemList);
+
         ExternalInventory.updateInventory(itemList);
         
-        return register.createReceipt(itemList);
+        return receipt;
     }
 }

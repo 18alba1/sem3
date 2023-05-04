@@ -32,7 +32,7 @@ public class ItemDTO
     @Override
     public String toString()
     {
-        return itemNumber + ": " + name + " | " + price + " kr\n";
+        return quantity + "x " + name + " | " + price + " kr\n";
     }
 
     /*

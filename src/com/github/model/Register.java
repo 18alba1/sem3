@@ -3,6 +3,7 @@ package com.github.model;
 import java.util.ArrayList;
 
 import com.github.dtos.*;
+import com.github.integration.*;
 
 /*
  * The register of the program
@@ -48,6 +49,9 @@ public class Register
     public ReceiptDTO createReceipt(ArrayList<ItemDTO> items)
     {
         ReceiptDTO receipt = new ReceiptDTO(totalPrice, totalVAT, change, items);
+
+        AccountingSystem.updateAccountingInfo(receipt);
+        SaleLog.addSale(receipt);
 
         return receipt;
     }

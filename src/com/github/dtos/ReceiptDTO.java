@@ -36,7 +36,8 @@ public class ReceiptDTO
             receipt += items.get(i).toString();
         }
 
-        receipt += "Total Price: " + totalPrice + " kr \n" + "Total Vat: " + totalVAT + " kr \n" + "Change back: " + change + " kr";
+        receipt += "Total Price(Inc. VAT): " + totalPrice + " kr \n" + "Total Vat: " + totalVAT + " kr \n" + "Change back: " + change + " kr";
+        receipt += "\n" + "-------------------";
 
         return receipt;
     }

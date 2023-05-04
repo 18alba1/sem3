@@ -23,8 +23,11 @@ public class View
         ItemDTO item2 = contr.scanProduct(2);
         System.out.println("Scanned Item: " + item2.getName());
 
-        ItemDTO item3 = contr.scanProduct(3);
+        ItemDTO item3 = contr.scanProduct(2);
         System.out.println("Scanned Item: " + item3.getName());
+
+        ItemDTO item4 = contr.scanProduct(3);
+        System.out.println("Scanned Item: " + item4.getName());
 
         double change = contr.pay(500);
         System.out.println("change back: " + change + "\n");
