@@ -24,4 +24,4 @@ The code and diagrams were made in collaboration with Alexander Ohlsson (Aleohl3
 
 ## Output from program
 
-![output](https://github.com/18alba1/sem3/blob/main/images/output.png?raw=true)
+![output](https://github.com/18alba1/sem3/blob/main/images/output.jpg?raw=true)
