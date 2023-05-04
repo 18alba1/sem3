@@ -11,9 +11,9 @@ public class Main
 {
 
     /*
-     * Used in the startup and creates controller etc
+     * The application's entry point
      * 
-     * @param args (??????)
+     * @param args an array of command-line arguments for the application
      */
     public static void main (String[] args)
     {

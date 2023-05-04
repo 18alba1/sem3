@@ -1,7 +1,8 @@
 package integration;
 
 import java.util.ArrayList;
-import DTOs.*;
+
+import DTOs.ItemDTO;
 
 /*
  * The external inventory of the program
@@ -11,10 +12,7 @@ public class ExternalInventory
     /*
      * The external inventory
      */
-    public ExternalInventory ()
-    {
-
-    }
+    public ExternalInventory() {}
 
     /*
      * Returns an ItemDTO object with the specified barcode 
@@ -22,7 +20,7 @@ public class ExternalInventory
      * @param barcode, the unique barcode identifier of the item
      * @return an ItemDTO object with the specified barcode and other values for all other parameters
      */
-    public static ItemDTO getItem (int barcode)      
+    public static ItemDTO getItem(int barcode)      
     {
         //Exampel code for test
         ItemDTO item;
@@ -50,7 +48,7 @@ public class ExternalInventory
      * 
      * @param items, an Array list of all items
      */
-    public static void updateInventory (ArrayList<ItemDTO> items)    
+    public static void updateInventory(ArrayList<ItemDTO> items)    
     {
         // Behöver ej koda
     }

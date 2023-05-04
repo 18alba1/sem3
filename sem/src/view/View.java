@@ -1,7 +1,7 @@
 package view;
-import DTOs.ItemDTO;
-import DTOs.ReceiptDTO;
-import controller.*;
+
+import controller.Controller;
+import DTOs.*;
 
 /*
  * The view which uses the controller to make method calls
@@ -15,7 +15,6 @@ public class View
      */
     public View(Controller contr)
     {
-        
         contr.startSale();
 
         ItemDTO item1 = contr.scanProduct(1);
@@ -32,6 +31,5 @@ public class View
 
         ReceiptDTO receipt = contr.endTransaction();
         System.out.println(receipt.toString());
- 
     }
 }

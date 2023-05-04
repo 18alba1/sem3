@@ -19,7 +19,7 @@ public class ItemDTO
      * @param quantity, quantity of the item
      * @param vat, the VAT-rate for the item
      */
-    public ItemDTO (int itemNumber, String name, double price, String description, int quantity, double vat)
+    public ItemDTO(int itemNumber, String name, double price, String description, int quantity, double vat)
     {
         this.itemNumber = itemNumber;
         this.name = name;
@@ -28,7 +28,6 @@ public class ItemDTO
         this.quantity = quantity;
         this.vat = vat;
     }
-
 
     @Override
     public String toString()
@@ -41,7 +40,7 @@ public class ItemDTO
      * 
      * @return price of item
      */
-    public double getPrice ()
+    public double getPrice()
     {
         return price;
     }
@@ -51,7 +50,7 @@ public class ItemDTO
      * 
      * @param newPrice, the new price that is going to be set
      */
-    public void setPrice (double newPrice)
+    public void setPrice(double newPrice)
     {
         price = newPrice;
     }
@@ -62,7 +61,7 @@ public class ItemDTO
      * @return the unique identification number of the item
      */
 
-    public int getItemNumber ()
+    public int getItemNumber()
     {
         return itemNumber;
     }
@@ -72,7 +71,7 @@ public class ItemDTO
      * 
      * @param newItemNumber, the new item number that is going to be set
      */
-    public void setItemNumber (int newItemNumber)
+    public void setItemNumber(int newItemNumber)
     {
         itemNumber = newItemNumber;
     }
@@ -82,18 +81,17 @@ public class ItemDTO
      * 
      * @return the name of the item
      */
-    public String getName ()
+    public String getName()
     {
         return name;
     }
-
 
     /*
      * sets item name
      * 
      * @param newName, the new item name that is going to be set
      */
-    public void setName (String newName)
+    public void setName(String newName)
     {
         name = newName;
     }
@@ -103,7 +101,7 @@ public class ItemDTO
      * 
      * @return the description of the item
      */
-    public String getDescription ()
+    public String getDescription()
     {
         return description;
     }
@@ -113,7 +111,7 @@ public class ItemDTO
      * 
      * @param newDescription, the new item description that is going to be set
      */
-    public void setDescription (String newDescription)
+    public void setDescription(String newDescription)
     {
         description = newDescription;
     }
@@ -123,7 +121,7 @@ public class ItemDTO
      * 
      * @return the quantity of the item
      */
-    public int getQuantity ()
+    public int getQuantity()
     {
         return quantity;
     }
@@ -133,7 +131,7 @@ public class ItemDTO
      * 
      * @param quantity, the new item quantity that is going to be set
      */
-    public void setQuantity (int quantity)
+    public void setQuantity(int quantity)
     {
         this.quantity = quantity;
     }
@@ -143,7 +141,7 @@ public class ItemDTO
      * 
      * @return the VAT of the item
      */
-    public double getVAT ()
+    public double getVAT()
     {
         return vat;
     }
@@ -153,7 +151,7 @@ public class ItemDTO
      * 
      * @param newVAT, the new item VAT that is going to be set
      */
-    public void setVAT (int newVAT)
+    public void setVAT(int newVAT)
     {
         vat = newVAT;
     }

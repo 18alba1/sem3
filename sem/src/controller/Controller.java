@@ -1,8 +1,10 @@
 package controller;
-import DTOs.ItemDTO;
-import DTOs.ReceiptDTO;
-import model.*;
+
 import java.util.ArrayList;
+
+import DTOs.*;
+import model.*;
+import integration.ExternalInventory;
 
 /*
  * The controller class which contains all logic
@@ -15,7 +17,7 @@ public class Controller
     /* 
      * Creates the Register
     */
-    public Controller ()
+    public Controller()
     {
         this.register = new Register();
     }
@@ -23,7 +25,7 @@ public class Controller
     /*
      * Starts the sale
      */
-    public void startSale ()
+    public void startSale()
     {
         goods = new Goods();
     }
@@ -35,7 +37,7 @@ public class Controller
      * @param barcode The barcode of the product that is currently being scanned
      * @return ItemDTO which represents the scanned product
      */
-    public ItemDTO scanProduct (int barcode)
+    public ItemDTO scanProduct(int barcode)
     {
         ItemDTO item = goods.addProduct(barcode);
         register.updateTotal(item);
@@ -49,7 +51,7 @@ public class Controller
      * @param paidAmount The amount that the customer pays
      * @return The result of the change calculation
      */
-    public double pay (double paidAmount)
+    public double pay(double paidAmount)
     {
         double change = register.payment(paidAmount);
         
@@ -61,9 +63,11 @@ public class Controller
      * 
      * @return object representing the receipt for the items purchased
      */
-    public ReceiptDTO endTransaction ()
+    public ReceiptDTO endTransaction()
     {
         ArrayList<ItemDTO> itemList = goods.getItems();
+        ExternalInventory.updateInventory(itemList);
+        
         return register.createReceipt(itemList);
     }
 }

@@ -1,8 +1,9 @@
 package model;
 
 import java.util.ArrayList;
+
 import DTOs.ItemDTO;
-import integration.*;
+import integration.ExternalInventory;
 
 /*
  * the goods/items
@@ -14,17 +15,14 @@ public class Goods
     /*
      * goods
      */
-    public Goods ()
-    {
-        
-    }
+    public Goods() {}
 
     /*
      * gets items of the list
      * 
      * @return an ArrayList containg items
      */
-    public ArrayList<ItemDTO> getItems ()
+    public ArrayList<ItemDTO> getItems()
     {
         return items; 
     }
@@ -61,7 +59,7 @@ public class Goods
      * @param barcode The barcode of the product to be added.
      * @return The ItemDTO object representing the added product.
      */
-    public ItemDTO addProduct (int barcode)
+    public ItemDTO addProduct(int barcode)
     {
         ItemDTO item = ExternalInventory.getItem(barcode);
         if (item.getItemNumber() != 0)
@@ -72,5 +70,4 @@ public class Goods
         }
         return item;
     }
-
 }

@@ -1,5 +1,6 @@
 package integration;
-import DTOs.*;
+
+import DTOs.ReceiptDTO;
 
 /*
  * Logs the sale
@@ -9,17 +10,14 @@ public class SaleLog
     /*
      * The sale log
      */
-    public SaleLog ()
-    {
-
-    }
+    public SaleLog() {}
 
     /*
      * Adds sale
      * 
      * @param receipt, an object of the type ReceiptDTO whihc represents the receipt which is added tot the sale
      */
-    public static void addSale (ReceiptDTO receipt)       
+    public static void addSale(ReceiptDTO receipt)       
     {
         //Behöver ej koda
     }

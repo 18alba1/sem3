@@ -1,8 +1,8 @@
 package model;
 
-import DTOs.ItemDTO;
-import DTOs.ReceiptDTO;
 import java.util.ArrayList;
+
+import DTOs.*;
 
 /*
  * The register of the program
@@ -16,21 +16,16 @@ public class Register
     /*
      * The register
      */
-    public Register ()
-    {
-
-    }
+    public Register() {}
 
     /*
      * Updates the total price of the sale with the price of the given item.
      * @param item The item to add to the sale total.
      */
-    public void updateTotal (ItemDTO item)
+    public void updateTotal(ItemDTO item)
     {
         totalPrice += item.getPrice();
         totalVAT += item.getPrice() * (item.getVAT() / 100);
-        
-        //Display.updateTotal()
     }
 
     /*
@@ -50,9 +45,10 @@ public class Register
      * @param items The list of items to include in the receipt.
      * @return The newly created receipt.
      */
-    public ReceiptDTO createReceipt (ArrayList<ItemDTO> items)
+    public ReceiptDTO createReceipt(ArrayList<ItemDTO> items)
     {
         ReceiptDTO receipt = new ReceiptDTO(totalPrice, totalVAT, change, items);
+
         return receipt;
     }
     
@@ -60,7 +56,7 @@ public class Register
      * Returns the total price of the sale.
      * @return The total price of the sale.
      */
-    public double getTotalPrice ()
+    public double getTotalPrice()
     {
         return this.totalPrice;
     }
@@ -69,7 +65,7 @@ public class Register
      * Gets the total VAT of the sale.
      * @return The total VAT of the sale.
      */
-    public double getTotalVAT ()
+    public double getTotalVAT()
     {
         return this.totalVAT;
     }
@@ -78,7 +74,7 @@ public class Register
      * Gets the change owed to the customer.
      * @return The change owed to the customer.
      */
-    public double getChange ()
+    public double getChange()
     {
         return this.change;
     }

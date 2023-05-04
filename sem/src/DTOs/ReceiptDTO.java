@@ -2,13 +2,12 @@ package DTOs;
 
 import java.util.ArrayList;
 
-public class ReceiptDTO {
-    
+public class ReceiptDTO
+{
     private double totalPrice;
     private double totalVAT;
     private double change;
     private ArrayList<ItemDTO> items;
-
 
      /*
      * Constructs ReceiptDTO with the given parameters
@@ -25,7 +24,6 @@ public class ReceiptDTO {
         this.change = change;
         this.items = items;
     }
-
 
     @Override
     public String toString()
@@ -48,7 +46,7 @@ public class ReceiptDTO {
      * 
      * @return The total price 
      */
-    public double getTotalPrice ()
+    public double getTotalPrice()
     {
         return totalPrice;
     }
@@ -58,7 +56,7 @@ public class ReceiptDTO {
      * 
      * @return The total VAT 
      */
-    public double getTotalVAT ()
+    public double getTotalVAT()
     {
         return totalVAT;
     }
@@ -68,7 +66,7 @@ public class ReceiptDTO {
      * 
      * @return The change 
      */
-    public double getChange ()
+    public double getChange()
     {
         return change;
     }
@@ -78,7 +76,7 @@ public class ReceiptDTO {
      * 
      * @return The items on the list 
      */
-    public ArrayList<ItemDTO> getItems ()
+    public ArrayList<ItemDTO> getItems()
     {
         return items;
     }

@@ -10,10 +10,7 @@ public class AccountingSystem
     /*
      * the accounitng system
      */
-    public AccountingSystem ()
-    {
-
-    }
+    public AccountingSystem() {}
 
     /*
      * updates the accounting infromation after a sale
