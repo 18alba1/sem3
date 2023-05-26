@@ -13,11 +13,17 @@ public class Register
     private double totalPrice;
     private double totalVAT; 
     private double change;
+    private AccountingSystem accountingSystem;
+    private SaleLog saleLog;
 
     /*
      * The register
      */
-    public Register() {}
+    public Register(AccountingSystem accountingSystem, SaleLog saleLog)
+    {
+        this.accountingSystem = accountingSystem;
+        this.saleLog = saleLog;
+    }
 
     /*
      * Updates the total price of the sale with the price of the given item.
@@ -50,8 +56,8 @@ public class Register
     {
         ReceiptDTO receipt = new ReceiptDTO(totalPrice, totalVAT, change, items);
 
-        AccountingSystem.updateAccountingInfo(receipt);
-        SaleLog.addSale(receipt);
+        accountingSystem.updateAccountingInfo(receipt);
+        saleLog.addSale(receipt);
 
         return receipt;
     }

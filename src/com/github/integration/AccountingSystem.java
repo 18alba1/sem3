@@ -17,7 +17,7 @@ public class AccountingSystem
      * 
      * @param receipt, holds the information that is needed to update the accounting
      */
-    public static void updateAccountingInfo (ReceiptDTO receipt)
+    public void updateAccountingInfo (ReceiptDTO receipt)
     {
         // Behöver ej koda
     }

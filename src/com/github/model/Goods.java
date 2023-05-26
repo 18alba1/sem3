@@ -11,11 +11,15 @@ import com.github.integration.ExternalInventory;
 public class Goods 
 {
     private ArrayList<ItemDTO> items = new ArrayList<ItemDTO>();
+    private ExternalInventory externalInventory;
 
     /*
      * goods
      */
-    public Goods() {}
+    public Goods(ExternalInventory externalInventory)
+    {
+        this.externalInventory = externalInventory;
+    }
 
     /*
      * gets items of the list
@@ -60,7 +64,7 @@ public class Goods
      */
     public ItemDTO addProduct(int barcode)
     {
-        ItemDTO item = ExternalInventory.getItem(barcode);
+        ItemDTO item = externalInventory.getItem(barcode);
         if (item.getItemNumber() != 0)
         {
         boolean found = checkIfDuplicatedItem(item);

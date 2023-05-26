@@ -17,12 +17,13 @@ public class Main
      */
     public static void main (String[] args)
     {
-        Controller controller = new Controller();
+
+        AccountingSystem accountingSystem = new AccountingSystem();
+        ExternalInventory externalInventory = new ExternalInventory();
+        SaleLog saleLog = new SaleLog();
+
+        Controller controller = new Controller(accountingSystem, externalInventory, saleLog);
 
         new View(controller);
-
-        new AccountingSystem();
-        new ExternalInventory();
-        new SaleLog();
     }
 }

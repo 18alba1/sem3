@@ -4,6 +4,7 @@ import org.junit.After;
 import org.junit.Test;
 
 import com.github.dtos.ItemDTO;
+import com.github.integration.ExternalInventory;
 import com.github.model.Goods;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -15,7 +16,7 @@ public class GoodsTest
     
     public GoodsTest() 
     {
-        goods = new Goods();
+        goods = new Goods(new ExternalInventory());
     }
 
     @After

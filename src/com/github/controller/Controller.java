@@ -4,7 +4,9 @@ import java.util.ArrayList;
 
 import com.github.dtos.*;
 import com.github.model.*;
+import com.github.integration.AccountingSystem;
 import com.github.integration.ExternalInventory;
+import com.github.integration.SaleLog;
 
 /*
  * The controller class which contains all logic
@@ -14,12 +16,19 @@ public class Controller
     private Goods goods;
     private Register register;
 
+    private AccountingSystem accountingSystem;
+    private ExternalInventory externalInventory;
+    private SaleLog saleLog;
+
     /* 
      * Creates the Register
     */
-    public Controller()
+    public Controller(AccountingSystem accountingSystem, ExternalInventory externalInventory, SaleLog saleLog)
     {
-        this.register = new Register();
+        this.accountingSystem = accountingSystem;
+        this.externalInventory = externalInventory;
+        this.saleLog = saleLog;
+        this.register = new Register(accountingSystem, saleLog);
     }
     
     /*
@@ -27,7 +36,7 @@ public class Controller
      */
     public void startSale()
     {
-        goods = new Goods();
+        goods = new Goods(externalInventory);
     }
 
     /*
@@ -68,7 +77,7 @@ public class Controller
         ArrayList<ItemDTO> itemList = goods.getItems();
         ReceiptDTO receipt = register.createReceipt(itemList);
 
-        ExternalInventory.updateInventory(itemList);
+        externalInventory.updateInventory(itemList);
         
         return receipt;
     }

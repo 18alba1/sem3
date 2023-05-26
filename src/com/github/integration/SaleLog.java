@@ -17,7 +17,7 @@ public class SaleLog
      * 
      * @param receipt, an object of the type ReceiptDTO whihc represents the receipt which is added tot the sale
      */
-    public static void addSale(ReceiptDTO receipt)       
+    public void addSale(ReceiptDTO receipt)       
     {
         //Behöver ej koda
     }

@@ -4,6 +4,7 @@ import org.junit.After;
 import org.junit.Test;
 
 import com.github.dtos.ItemDTO;
+import com.github.integration.*;
 import com.github.model.Register;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -14,7 +15,7 @@ public class RegisterTest
 
     public RegisterTest()
     {
-        register = new Register();
+        register = new Register(new AccountingSystem(), new SaleLog());
     }
 
     @After
