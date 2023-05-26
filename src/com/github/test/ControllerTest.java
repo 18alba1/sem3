@@ -15,7 +15,7 @@ public class ControllerTest
     
     public ControllerTest() 
     {
-        contr = new Controller(new AccountingSystem(), new ExternalInventoryTest(), new SaleLog());
+        contr = new Controller(new AccountingSystem(), new ExternalInventory(), new SaleLog());
         contr.startSale();
     }
 
